@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#222831",
-        secondary: "#00ADB5",
-        textPrimary: "#EEE",
-        textSecondary: "rgba(238, 238, 238, 0.75)",
+        primary: "rgba(57, 62, 70, 0.75)",
+        secondary: "rgb(230 107 0)",
+        textPrimary: "#000",
+        textSecondary: "000",
         accent: "rgba(57, 62, 70, 0.75)",
-        hoverSecondary: "#027378",
+        hoverSecondary: "rgb(175, 82, 0)",
         hoverPrimary: "#292d33",
         divider: "rgba(238, 238, 238, 0.10)",
         icons: "#393E46",

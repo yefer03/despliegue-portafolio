@@ -1,19 +1,22 @@
 // views
-import { About, Contact, Hero, Projects } from "./views";
+import { About, Hero, Projects, Tecnologies } from "./views";
 
 // components
 import { Menu } from "./components";
 
-function App() {
+const App = () => {
   return (
+
     <>
-      {/* <Hero />
+      <Hero />
       <About />
       <Projects />
-      <Contact />
-      <Menu /> */}
+      <Tecnologies />
+      <Menu />
     </>
+
   );
+
 }
 
 export default App;

@@ -1,45 +1,101 @@
-import uiUxOne from "./assets/ui-ux-project-one.svg";
-import uiUxTwo from "./assets/ui-ux-project-two.svg";
-import uiUxThree from "./assets/ui-ux-project-three.svg";
-import webOne from "./assets/web-project-one.jpeg";
-import webTwo from "./assets/web-project-two.jpeg";
-import webThree from "./assets/web-project-three.jpeg";
+import imageGit from "./assets/github.svg";
 
-export const projects = [
-  // {
-  //   id: 0,
-  //   category: "uiUx",
-  //   img: uiUxOne,
-  //   title: "UI/UX Web Template",
-  // },
-  // {
-  //   id: 1,
-  //   category: "uiUx",
-  //   img: uiUxTwo,
-  //   title: "UI/UX Tablet Template",
-  // },
-  // {
-  //   id: 2,
-  //   category: "uiUx",
-  //   img: uiUxThree,
-  //   title: "Solar System App Design",
-  // },
-  // {
-  //   id: 3,
-  //   category: "web",
-  //   img: webOne,
-  //   title: "Interior Design Website",
-  // },
-  // {
-  //   id: 4,
-  //   category: "web",
-  //   img: webTwo,
-  //   title: "Agency Landing Page",
-  // },
-  // {
-  //   id: 5,
-  //   category: "web",
-  //   img: webThree,
-  //   title: "Crypto Landing Page",
-  // },
+
+interface Project {
+
+  id: number;
+  category: string;
+  img: string;
+  title: string;
+  url: string;
+
+};
+
+
+export const projects: Project[] = [
+  {
+    id: 0,
+    category: "front",
+    img: imageGit,
+    title: "Frontend Code Connect",
+    url: "https://github.com/yefer03/Front-Code",
+  },
+  {
+    id: 1,
+    category: "front",
+    img: imageGit,
+    title: "Queue-With-Sockets",
+    url: "https://github.com/yefer03/Queue-With-Sockets.git",
+  },
+  {
+    id: 2,
+    category: "front",
+    img: imageGit,
+    title: "Journal App",
+    url: "https://github.com/yefer03/08-journal-app.git",
+  },
+  {
+    id: 3,
+    category: "front",
+    img: imageGit,
+    title: "veterinaria",
+    url: "https://github.com/yefer03/react_veterinaria.git",
+  },
+  {
+    id: 4,
+    category: "front",
+    img: imageGit,
+    title: "Heroes App",
+    url: "https://github.com/yefer03/07-heroes-spa.git",
+  },
+  {
+    id: 5,
+    category: "front",
+    img: imageGit,
+    title: "Gifs App",
+    url: "https://github.com/yefer03/04-gif-expert-app.git",
+  },
+  {
+    id: 6,
+    category: "front",
+    img: imageGit,
+    title: "My Portfolio",
+    url: "https://github.com/yefer03/My_Portfolio.git",
+  },
+  {
+    id: 7,
+    category: "back",
+    img: imageGit,
+    title: "Crud NodeJs",
+    url: "https://github.com/yefer03/crud_nodejs_backend.git",
+  },
+  {
+    id: 8,
+    category: "back",
+    img: imageGit,
+    title: "Crud Login With Google",
+    url: "https://github.com/yefer03/Tokens_Google_Login_Nodejs.git",
+  },
+  { 
+    id: 9,
+    category: "back",
+    img: imageGit,
+    title: "Subir Archivos NodeJs",
+    url: "https://github.com/yefer03/Subir_Archivos_Nodejs.git",
+  },
+  {
+    id: 10,
+    category: "back",
+    img: imageGit,
+    title: "Websocket Server",
+    url: "https://github.com/yefer03/Websocket-Server.git",
+  },
+  {
+    id: 11,
+    category: "back",
+    img: imageGit,
+    title: "Backend Code Connect",
+    url: "https://github.com/yefer03/backend-code.git",
+  },
+
 ];
