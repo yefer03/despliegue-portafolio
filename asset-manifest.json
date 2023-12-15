@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/despliegue-portafolio/static/css/main.20406d86.css",
+    "main.js": "/despliegue-portafolio/static/js/main.349c6429.js",
+    "static/media/sql-server.svg": "/despliegue-portafolio/static/media/sql-server.7e3c2025a2f083448bd8b4aa32b126ea.svg",
+    "static/media/figura2.svg": "/despliegue-portafolio/static/media/figura2.8bfaca274fac7cb2fcf58c5d520bdb57.svg",
+    "static/media/mongodb.svg": "/despliegue-portafolio/static/media/mongodb.1dc47c60f9d90afc1e171c4529af5966.svg",
+    "static/media/figura1.svg": "/despliegue-portafolio/static/media/figura1.2fa656b66b47d97d0dad7234b18ff801.svg",
+    "static/media/nodejs.svg": "/despliegue-portafolio/static/media/nodejs.b0d6c7cead1cf51d8ac0b40bf3637dce.svg",
+    "static/media/mysql.svg": "/despliegue-portafolio/static/media/mysql.5dbd7ffb56a921cecde426cca82f0df4.svg",
+    "static/media/reactjs.svg": "/despliegue-portafolio/static/media/reactjs.e72c9ed5483656b44c338310ad3219ce.svg",
+    "static/media/python.svg": "/despliegue-portafolio/static/media/python.584d8e8274929c83b3afe4d258e31753.svg",
+    "static/media/bootstrap.svg": "/despliegue-portafolio/static/media/bootstrap.850b2688500c5f08f27395fe83670cf4.svg",
+    "static/media/github.svg": "/despliegue-portafolio/static/media/github.ab75ec34d2f5b66e0c7b792bf16e46c2.svg",
+    "index.html": "/despliegue-portafolio/index.html",
+    "static/media/linkedin.svg": "/despliegue-portafolio/static/media/linkedin.bc5aec50c9c7d4afaf9a956ed15439c3.svg",
+    "static/media/download-btn-icon.svg": "/despliegue-portafolio/static/media/download-btn-icon.db00ff1fa6f1d172b12f9e1441c6d79c.svg",
+    "static/media/tailwind.svg": "/despliegue-portafolio/static/media/tailwind.973c73e85d4daa24b257ba20298716c4.svg",
+    "static/media/css.svg": "/despliegue-portafolio/static/media/css.315b8fdb9dbf75ae965b80bf368895cd.svg",
+    "static/media/html.svg": "/despliegue-portafolio/static/media/html.0107c93943a8f415b5db64ebb0a9d12d.svg",
+    "static/media/javascript2.svg": "/despliegue-portafolio/static/media/javascript2.b879f838faf1cb951d1c2230fd933a39.svg",
+    "static/media/microsoft.svg": "/despliegue-portafolio/static/media/microsoft.f6197f18a1a75a99331a142025cfaf73.svg",
+    "main.20406d86.css.map": "/despliegue-portafolio/static/css/main.20406d86.css.map",
+    "main.349c6429.js.map": "/despliegue-portafolio/static/js/main.349c6429.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20406d86.css",
+    "static/js/main.349c6429.js"
+  ]
+}
