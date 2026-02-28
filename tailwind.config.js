@@ -4,20 +4,40 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "rgba(57, 62, 70, 0.75)",
-        secondary: "rgb(230 107 0)",
-        textPrimary: "#000",
-        textSecondary: "000",
-        accent: "rgba(57, 62, 70, 0.75)",
-        hoverSecondary: "rgb(175, 82, 0)",
-        hoverPrimary: "#292d33",
-        divider: "rgba(238, 238, 238, 0.10)",
-        icons: "#393E46",
-        overlay: "rgba(0, 0, 0, 0.25)",
+        dark: {
+          900: '#0a0a0f',
+          800: '#0f1117',
+          700: '#151821',
+          600: '#1a1d2b',
+          500: '#242838',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       screens: {
-        xs: "420px",
-        xl: "1170px",
+        xs: '420px',
+        xl: '1170px',
+      },
+      animation: {
+        'gradient': 'gradient 8s ease infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+      },
+      keyframes: {
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(6,182,212,0.2), 0 0 20px rgba(6,182,212,0.1)' },
+          '100%': { boxShadow: '0 0 10px rgba(6,182,212,0.4), 0 0 40px rgba(6,182,212,0.2)' },
+        },
       },
     },
   },

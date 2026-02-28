@@ -1,94 +1,110 @@
-
-import githubIcon from "../assets/github.svg";
-import linkedinIcon from "../assets/linkedin.svg";
-import aboutPageIllustation from "../assets/figura2.svg";
-
-// components
-import { SocialMediaIcon, Reveal } from "../components";
-
-// framer-motion
 import { motion } from "framer-motion";
-
-// utils
-import { scale } from '../utils/variants';
+import { Reveal } from "../components";
+import { fadeIn } from "../utils/variants";
 import { transition } from "../utils/transition";
 
 const About = () => {
+  const highlights = [
+    { value: "2+", label: "Años de experiencia" },
+    { value: ".NET", label: "Stack principal" },
+    { value: "APIs", label: "Enfoque profesional" },
+    { value: "IA", label: "Integraciones MCPs" },
+  ];
+
   return (
-
-    <div
+    <section
       id="about"
-      className="min-h-screen flex items-center justify-center relative"
+      className="min-h-screen flex items-center justify-center relative py-20"
     >
-      <div
-        className="max-w-screen-2xl flex flex-col xl:flex-row xl:justify-between 
-        items-center xl:items-start gap-12 w-full py-16 px-12"
-      >
-        <div className="flex-1 flex flex-col gap-4">
-          <Reveal>
+      <div className="max-w-screen-xl w-full px-6 sm:px-12">
+        <Reveal>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Sobre <span className="gradient-text">mí</span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-full mb-12" />
+        </Reveal>
 
-            <h2
-              className="text-center xl:text-start text-4xl sm:text-5xl lg:text-[64px]
-                font-bold text-textPrimary"
-            >
-              About <span className="text-secondary"> me</span>
-            </h2>
-
-          </Reveal>
-          
-          <Reveal>
-            <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary font-bold">
-            I am Yeferson, a web developer with expertise in Node.js and React.js. My primary focus lies in building robust and scalable backend systems, but I also possess strong skills in frontend development. My passion revolves around problem-solving and crafting efficient and secure web applications. I strive to stay up-to-date with the latest technologies and am always eager to learn and tackle new challenges.
-            </p>
-          </Reveal>
-          
-
-          <motion.div 
-            transition={ transition() }
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          {/* Main text */}
+          <motion.div
+            variants={fadeIn("up")}
+            transition={transition()}
             initial="hidden"
             whileInView="visible"
-            viewport={ { once: false } }
-            className="flex items-center justify-center xl:justify-start gap-6 "
+            viewport={{ once: false }}
+            className="lg:col-span-3 space-y-6"
           >
-            <SocialMediaIcon
-              link="https://github.com/yefer03"
-              imgSrc={ githubIcon }
-              title="github"
-            />
-            
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+              Soy desarrollador backend con enfoque en{" "}
+              <span className="text-cyan-400 font-semibold">.NET</span>, con más
+              de 2 años de experiencia trabajando tanto en proyectos modernos
+              como en mantenimiento de aplicaciones legacy sobre .NET Framework
+              4.5. Desarrollo y mantengo APIs, diseñando la lógica de negocio
+              bajo principios de{" "}
+              <span className="text-cyan-400 font-semibold">
+                Clean Architecture
+              </span>{" "}
+              y{" "}
+              <span className="text-cyan-400 font-semibold">
+                arquitectura hexagonal
+              </span>
+              .
+            </p>
 
-            <SocialMediaIcon
-              link="https://www.linkedin.com/in/yeferson-serna-restrepo-659672256/"
-              imgSrc={ linkedinIcon }
-              title="linkedin"
-            />
+            <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+              Trabajo activamente con bases de datos relacionales: diseño modelos
+              de datos, optimizo consultas y desarrollo stored procedures que
+              integro directamente con el backend. Me integro con múltiples
+              sistemas externos mediante APIs REST y SOAP, y participo en la
+              definición de la arquitectura de las aplicaciones.
+            </p>
 
+            <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+              Implemento integraciones con IA mediante MCPs para chatbots y
+              automatizaciones inteligentes. Complemento mi trabajo con
+              automatización de procesos usando Python, creando scripts que
+              interactúan con APIs, tareas del sistema operativo y automatización
+              de navegador.
+            </p>
+
+            <div className="pt-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20">
+                <span className="text-violet-400 text-sm font-medium">
+                  🎓 Tecnólogo en Desarrollo de Software — Finalizando
+                  Ingeniería de Software
+                </span>
+              </div>
+            </div>
           </motion.div>
 
-        </div>
-
-        <div className="flex-1 flex items-center justify-center">
-
-          <motion.img 
-            variants={ scale() }
-            transition={ transition() }
+          {/* Stats cards */}
+          <motion.div
+            variants={fadeIn("up")}
+            transition={{ ...transition(), delay: 0.3 }}
             initial="hidden"
             whileInView="visible"
-            viewport={ { once: false } }
-            src={ aboutPageIllustation }
-            alt="" 
-            className="max-w-full sm:max-w-[501px]" />
-
+            viewport={{ once: false }}
+            className="lg:col-span-2 grid grid-cols-2 gap-4"
+          >
+            {highlights.map((item, index) => (
+              <div
+                key={index}
+                className="gradient-border p-6 flex flex-col items-center justify-center text-center group hover:scale-105 transition-transform duration-300"
+              >
+                <span className="text-2xl sm:text-3xl font-bold gradient-text">
+                  {item.value}
+                </span>
+                <span className="text-slate-400 text-xs sm:text-sm mt-2">
+                  {item.label}
+                </span>
+              </div>
+            ))}
+          </motion.div>
         </div>
-
-
-
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
-
-    </div>
-
+      <div className="absolute bottom-0 left-0 w-full section-divider" />
+    </section>
   );
 };
 

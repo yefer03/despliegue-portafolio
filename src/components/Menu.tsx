@@ -1,65 +1,45 @@
-// mui
 import { IconButton, Tooltip } from "@mui/material";
-
-// mui - icons
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import AppsIcon from "@mui/icons-material/Apps";
-import SettingsEthernetIcon from '@mui/icons-material/SettingsEthernet';
-
-// react-scroll
+import CodeIcon from "@mui/icons-material/Code";
+import EmailIcon from "@mui/icons-material/Email";
 import { Link } from "react-scroll";
 
 const Menu = () => {
-  return(
-    <div className="fixed bottom-0 sm:bottom-12 w-full sm:w-fit left-1/2 -translate-x-1/2 bg-accent
-      rounded-t-xl sm:rounded-full py-3 px-6 flex items-center justify-around sm:justify-center gap-12 z-30"
-    >
-      <Link to="home" smooth>
-        <Tooltip title="Home" placement="top" arrow>
+  const navItems = [
+    { to: "home", icon: <HomeIcon />, label: "Inicio" },
+    { to: "about", icon: <PersonIcon />, label: "Sobre mí" },
+    { to: "skills", icon: <CodeIcon />, label: "Skills" },
+    { to: "projects", icon: <AppsIcon />, label: "Proyectos" },
+    { to: "contact", icon: <EmailIcon />, label: "Contacto" },
+  ];
 
-          <IconButton className="group">
-            <HomeIcon className="text-white group-hover:text-secondary"/>
-          </IconButton>
-
-        </Tooltip>
-      </Link>
-
-
-      <Link to="about" smooth>
-        <Tooltip title="About" placement="top" arrow>
-
-          <IconButton className="group">
-            <PersonIcon className="text-white group-hover:text-secondary"/>
-          </IconButton>
-
-        </Tooltip>
-      </Link>
-
-
-      <Link to="projects" smooth>
-        <Tooltip title="Projects" placement="top" arrow>
-
-          <IconButton className="group">
-            <AppsIcon className="text-white group-hover:text-secondary"/>
-          </IconButton>
-
-        </Tooltip>
-      </Link>
-
-
-      <Link to="tecnologies" smooth>
-        <Tooltip title="Tecnologies" placement="top" arrow>
-
-          <IconButton className="group">
-            <SettingsEthernetIcon className="text-white group-hover:text-secondary"/>
-          </IconButton>
-
-        </Tooltip>
-      </Link>
-
-    </div>
-  )
+  return (
+    <nav className="fixed bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-50">
+      <div className="glass rounded-2xl py-3 px-4 sm:px-6 flex items-center gap-2 sm:gap-4 shadow-2xl shadow-black/50">
+        {navItems.map(({ to, icon, label }) => (
+          <Link key={to} to={to} smooth offset={-20}>
+            <Tooltip title={label} placement="top" arrow>
+              <IconButton
+                className="group"
+                sx={{
+                  color: '#64748b',
+                  '&:hover': {
+                    color: '#06b6d4',
+                    backgroundColor: 'rgba(6, 182, 212, 0.1)',
+                  },
+                  transition: 'all 0.3s',
+                }}
+              >
+                {icon}
+              </IconButton>
+            </Tooltip>
+          </Link>
+        ))}
+      </div>
+    </nav>
+  );
 };
 
 export default Menu;

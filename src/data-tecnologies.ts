@@ -1,87 +1,58 @@
-import js from "./assets/images-tecnologies/javascript2.svg";
-import html from "./assets/images-tecnologies/html.svg";
-import css from "./assets/images-tecnologies/css.svg";
-import react from "./assets/images-tecnologies/reactjs.svg";
-import node from "./assets/images-tecnologies/nodejs.svg";
-import python from "./assets/images-tecnologies/python.svg";
-import mongo from "./assets/images-tecnologies/mongodb.svg";
-import sqlServer from "./assets/images-tecnologies/sql-server.svg";
-import mysql from "./assets/images-tecnologies/mysql.svg";
-import bootstrap from "./assets/images-tecnologies/bootstrap.svg";
-import tailwind from "./assets/images-tecnologies/tailwind.svg";
-import ofimaticas from "./assets/images-tecnologies/microsoft.svg";
+export interface SkillCategory {
+  title: string;
+  icon: string;
+  skills: string[];
+}
 
-
-
-interface Tecnologies {
-
-  id: number;
-  name: string;
-  img: string;
-
-};
-
-
-export const tecnologies: Tecnologies[] = [
+export const skillCategories: SkillCategory[] = [
   {
-    id: 0,
-    name: 'Javascript',
-    img: js,
-  },
-  {
-    id: 1,
-    name: 'HTML',
-    img: html,
+    title: "Backend",
+    icon: "⚙️",
+    skills: [
+      ".NET / C#",
+      ".NET Framework 4.5",
+      "ASP.NET Core",
+      "Node.js",
+      "Express",
+      "NestJS",
+      "Python",
+      "REST APIs",
+      "SOAP",
+      "Clean Architecture",
+      "Hexagonal Architecture",
+    ],
   },
   {
-    id: 2,
-    name: 'CSS',
-    img: css,
+    title: "Bases de Datos",
+    icon: "🗄️",
+    skills: [
+      "SQL Server",
+      "MySQL",
+      "MongoDB",
+      "Stored Procedures",
+      "Diseño de modelos",
+      "Optimización de consultas",
+    ],
   },
   {
-    id: 3,
-    name: 'React JS',
-    img: react,
+    title: "DevOps & Infraestructura",
+    icon: "🚀",
+    skills: ["IIS", "Linux", "Git", "GitHub", "Despliegue de aplicaciones"],
   },
   {
-    id: 4,
-    name: 'Node Js',
-    img: node,
+    title: "Frontend",
+    icon: "🎨",
+    skills: ["React", "JavaScript", "TypeScript", "HTML / CSS", "Tailwind CSS"],
   },
   {
-    id: 5,
-    name: 'Python',
-    img: python,
+    title: "IA & Automatización",
+    icon: "🤖",
+    skills: [
+      "MCPs",
+      "Chatbots",
+      "Python Scripts",
+      "Automatización de navegador",
+      "Automatización Windows",
+    ],
   },
-  {
-    id: 6,
-    name: 'Mongodb',
-    img: mongo,
-  },
-  {
-    id: 7,
-    name: 'SQL Server',
-    img: sqlServer,
-  },
-  {
-    id: 8,
-    name: 'My SQL',
-    img: mysql,
-  },
-  {
-    id: 9,
-    name: 'Bootstrap',
-    img: bootstrap,
-  },
-  { 
-    id: 10,
-    name: 'Tailwind css',
-    img: tailwind,
-  },
-  {
-    id: 11,
-    name: 'Herramientas Ofimaticas',
-    img: ofimaticas,
-  },
-
 ];

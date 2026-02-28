@@ -1,63 +1,58 @@
 export const optionsParticles = {
-    fpsLimit: 120,
+    fpsLimit: 60,
     interactivity: {
       events: {
-        // onClick: {
-        //   enable: true,
-        //   mode: "push",
-        // },
         onHover: {
           enable: true,
-          mode: "repulse",
+          mode: "grab",
         },
         resize: true,
       },
       modes: {
-        push: {
-          quantity: 4,
+        grab: {
+          distance: 140,
+          links: {
+            opacity: 0.3,
+          },
         },
-        repulse: {
-          distance: 200,
-          duration: 0.4,
-        },
-      }
+      },
     },
     particles: {
       color: {
-        value: "#000",
+        value: "#06b6d4",
       },
       links: {
-        color: "#000",
+        color: "#06b6d4",
         distance: 150,
         enable: true,
-        opacity: 0.5,
+        opacity: 0.08,
         width: 1,
       },
       collisions: {
-        enable: true,
+        enable: false,
       },
       move: {
         direction: undefined,
         enable: true,
         random: true,
-        speed: 2,
+        speed: 0.8,
         straight: false,
       },
       number: {
         density: {
           enable: true,
-          area: 400,
+          area: 800,
         },
-        value: 80,
+        value: 40,
       },
       opacity: {
-        value: 0.5,
+        value: 0.15,
       },
       shape: {
         type: "circle",
       },
       size: {
-        value: { min: 1, max: 5 },
+        value: { min: 1, max: 3 },
       },
     },
     detectRetina: true,
